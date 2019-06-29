@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">tools_library</string>
+
+    <string name="net_connect_error">网络连接失败，请检查当前网络</string>
+    <string name="net_connect_timeOut" translatable="false">世界上最远的距离就是没网</string>
+    <string name="net_bad_netWork" translatable="false">网络连接失败，请检查当前网络</string>
+    <string name="net_parse_error" translatable="false">参数不合法</string>
+    <string name="net_unKnown_error" translatable="false">系统繁忙,请稍后重</string>
+    <string name="loading">加载中...</string>
+</resources>
