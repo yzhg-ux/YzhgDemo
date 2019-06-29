@@ -14,7 +14,7 @@ allprojects {
 
 ### 添加依赖
 
-[！[]（https://jitpack.io/v/yzhg0854/YzhgDemo.svg）（https://jitpack.io/#yzhg0854/YzhgDemo）
+[![](https://jitpack.io/v/yzhg0854/YzhgDemo.svg)](https://jitpack.io/#yzhg0854/YzhgDemo)
 
 ```
 dependencies {
