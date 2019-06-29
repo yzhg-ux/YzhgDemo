@@ -1,6 +1,7 @@
 package com.yzhg.tool.base.fragment;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -32,17 +33,10 @@ public abstract class BasicFragment extends Fragment {
     protected Activity context;
     private CustomDialog customDialog;
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        mRootView = inflater.inflate(getLayoutId(), container, false);
-        return mRootView;
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        init();
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.context = (Activity) context;
     }
 
     protected void showBaseLoadingDialog(String msg) {
@@ -67,11 +61,4 @@ public abstract class BasicFragment extends Fragment {
             customDialog.dismiss();
         }
     }
-
-    private void init() {
-        context = getActivity();
-    }
-
-    protected abstract int getLayoutId();
-
 }

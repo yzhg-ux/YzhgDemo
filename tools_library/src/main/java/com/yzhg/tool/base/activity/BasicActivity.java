@@ -28,11 +28,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.yzhg.tool.R;
 import com.yzhg.tool.utils.common.ActivitysManager;
 import com.yzhg.tool.utils.common.CustomDialog;
-import com.yzhg.tool.utils.common.SPUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.HashMap;
 
 
 /**
@@ -54,8 +52,6 @@ public abstract class BasicActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setMaxAspect();
-        View contentView = getLayoutInflater().inflate(getLayoutId(), null);
-        setContentView(contentView);
         if (setStatusBarLucency()) {
             setStatusBarFullTransparent();
             setFitSystemWindow(false);
@@ -143,9 +139,6 @@ public abstract class BasicActivity extends AppCompatActivity {
             //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
     }
-
-
-    protected abstract int getLayoutId();
 
     protected void showBaseLoadingDialog(String msg) {
         showDialog(msg);
