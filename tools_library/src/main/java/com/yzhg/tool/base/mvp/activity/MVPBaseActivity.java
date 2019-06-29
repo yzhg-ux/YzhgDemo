@@ -9,16 +9,16 @@ import androidx.lifecycle.Lifecycle;
 import com.uber.autodispose.AutoDispose;
 import com.uber.autodispose.AutoDisposeConverter;
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
-import com.yzhg.common.base.activity.BasicActivity;
-import com.yzhg.common.base.mvp.base.BasePresenterImpl;
-import com.yzhg.common.base.mvp.base.BaseView;
+import com.yzhg.tool.base.activity.BasicActivity;
+import com.yzhg.tool.base.mvp.base.BasePresenterImpl;
+import com.yzhg.tool.base.mvp.base.BaseView;
 
 import java.lang.reflect.ParameterizedType;
 
 
 /**
  * MVPPlugin
- * 邮箱 784787081@qq.com
+ * 邮箱 2012320766@qq.com
  */
 
 public abstract class MVPBaseActivity<V extends BaseView, T extends BasePresenterImpl<V>> extends BasicActivity implements BaseView {

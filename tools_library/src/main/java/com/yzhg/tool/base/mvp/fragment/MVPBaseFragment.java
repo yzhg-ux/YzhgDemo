@@ -18,7 +18,7 @@ import java.lang.reflect.ParameterizedType;
 
 /**
  * MVPPlugin
- * 邮箱 784787081@qq.com
+ * 邮箱 2012320766@qq.com
  */
 
 public abstract class MVPBaseFragment<V extends BaseView, T extends BasePresenterImpl<V>> extends BasicFragment implements BaseView {
