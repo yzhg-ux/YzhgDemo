@@ -1,5 +1,28 @@
-# YzhgDemo
 # 使用说明
+
+# 使用方法
+
+
+```
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+### 添加依赖
+
+[！[]（https://jitpack.io/v/yzhg0854/YzhgDemo.svg）（https://jitpack.io/#yzhg0854/YzhgDemo）
+
+```
+dependencies {
+	implementation 'com.github.yzhg0854:YzhgDemo:1.0.6'
+}
+```
+
+
 
 ### base包下
     
