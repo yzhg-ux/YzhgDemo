@@ -48,7 +48,7 @@ public class Tools {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 
-    private static void init(Context context) {
+    public static void init(Context context) {
         Tools.context = context.getApplicationContext();
     }
 
