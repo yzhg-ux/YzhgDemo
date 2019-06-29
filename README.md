@@ -1,9 +1,37 @@
 # YzhgDemo
-工具类
+# 使用说明
+
+### base包下
+    
+ - BasicActivity  activity基类 可以直接继承此类
+ - BasicFragment Fragment基类
+ - MVP
+    - MVPBaseActivity 需要使用MVP模式的时候继承此类
+    - base 此包下是关于MVP的封装
+    - MVPBaseFragment 需要使用MVP模式继承此类
+ 
+### http包下
+ - 此包下封装了一个Retrofit+OkHttp+Rxjava的网络请求
+ - 详细用法如下
+ - 
+### utils
+ - ActivityManager 用于Activity保存和退出
+ - CountDemoTime 倒计时控件
+ - CustomDialog 自定义的dialog
+ - GlideUtil Glider进一步封装
+ - JsonUtil Json封装
+ - LogUtils 日志输出封装
+ - PermissionTools 权限封装
+ - RxJavaUtils RxJava线程切换封装
+ - SDCaedOperation SD卡的操作
+ - SpannableStringUtils SpannableString封装
+ - SpUtils SP的封装
+ - TheadUtils 主线程与子线程的切换
+ - Toast Toast的封装适配Android 8版本出现的关闭通知后无法弹起Toast
+ - Tools 主要工具类 使用前必须初始化
 
 
 
-内置BasicActivit   BasicFragment  可用于继承
 
-内置MVP封装 
-    使用方法
+
+
