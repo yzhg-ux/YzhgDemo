@@ -5,24 +5,24 @@
 
 ```
 allprojects {
-		repositories {
+	repositories {
 			...
-			maven { url 'https://jitpack.io' }
-		}
+	maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 ### 添加依赖
+
+当前版本：  下方链接version自行添加
 
 [![](https://jitpack.io/v/yzhg0854/YzhgDemo.svg)](https://jitpack.io/#yzhg0854/YzhgDemo)
 
 ```
 dependencies {
-	implementation 'com.github.yzhg0854:YzhgDemo:1.0.6'
+	implementation 'com.github.yzhg0854:YzhgDemo:version'
 }
 ```
-
-
 
 ### base包下
     
