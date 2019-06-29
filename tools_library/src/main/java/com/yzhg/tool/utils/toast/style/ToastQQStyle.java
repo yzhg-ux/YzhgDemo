@@ -2,7 +2,7 @@ package com.yzhg.tool.utils.toast.style;
 
 import android.view.Gravity;
 
-import com.yzhg.common.utils.toast.IToastStyle;
+import com.yzhg.tool.utils.toast.IToastStyle;
 
 
 /**

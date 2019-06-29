@@ -14,8 +14,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.yzhg.common.R;
-import com.yzhg.common.utils.toast.style.ToastBlackStyle;
+
+import com.yzhg.tool.R;
+import com.yzhg.tool.utils.toast.style.ToastBlackStyle;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -145,8 +146,8 @@ public final class ToastUtils {
      *
      * @param style         样式实现类，框架已经实现三种不同的样式
      *                      黑色样式：{@link ToastBlackStyle}
-     *                      白色样式：{@link com.jiandaoshou.utlis.toast.style.ToastWhiteStyle}
-     *                      仿QQ样式：{@link com.jiandaoshou.utlis.toast.style.ToastQQStyle}
+     *                      白色样式：{@link com.yzhg.tool.utils.toast.style.ToastWhiteStyle}
+     *                      仿QQ样式：{@link com.yzhg.tool.utils.toast.style.ToastQQStyle}
      */
     public static void initStyle(IToastStyle style) {
         ToastUtils.sDefaultStyle = style;

@@ -1,7 +1,8 @@
 package com.yzhg.tool.http.tools;
 
 
-import com.yzhg.common.utils.common.LogUtils;
+
+import com.yzhg.tool.utils.common.LogUtils;
 
 import java.io.IOException;
 

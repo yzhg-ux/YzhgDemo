@@ -9,7 +9,7 @@ import android.provider.Settings;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.yzhg.common.R;
+import com.yzhg.tool.R;
 
 
 /**

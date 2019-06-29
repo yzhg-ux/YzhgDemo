@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.yzhg.common.R;
+import com.yzhg.tool.R;
 
 
 /**
