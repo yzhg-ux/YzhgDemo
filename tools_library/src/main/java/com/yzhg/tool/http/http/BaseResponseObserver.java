@@ -2,9 +2,9 @@ package com.yzhg.tool.http.http;
 
 import com.google.gson.JsonParseException;
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException;
-import com.yzhg.common.R;
-import com.yzhg.common.utils.common.LogUtils;
-import com.yzhg.common.utils.common.Utils;
+import com.yzhg.tool.R;
+import com.yzhg.tool.utils.Tools;
+import com.yzhg.tool.utils.common.LogUtils;
 
 import org.json.JSONException;
 
@@ -119,25 +119,25 @@ public abstract class BaseResponseObserver <T extends BaseResponse> implements O
     private void onException(ExceptionReason reason, String error) {
         switch (reason) {
             case CONNECT_ERROR:
-                onDefeated(Utils.getString(R.string.net_connect_error), 1001);
-                LogUtils.d(Utils.getString(R.string.net_connect_error));
+                onDefeated(Tools.getString(R.string.net_connect_error), 1001);
+                LogUtils.d(Tools.getString(R.string.net_connect_error));
                 break;
             case CONNECT_TIMEOUT:
-                onDefeated(Utils.getString(R.string.net_connect_timeOut), 1002);
-                LogUtils.d(Utils.getString(R.string.net_connect_timeOut));
+                onDefeated(Tools.getString(R.string.net_connect_timeOut), 1002);
+                LogUtils.d(Tools.getString(R.string.net_connect_timeOut));
                 break;
             case BAD_NETWORK:
-                onDefeated(Utils.getString(R.string.net_bad_netWork), 1003);
-                LogUtils.d(Utils.getString(R.string.net_bad_netWork));
+                onDefeated(Tools.getString(R.string.net_bad_netWork), 1003);
+                LogUtils.d(Tools.getString(R.string.net_bad_netWork));
                 break;
             case PARSE_ERROR:
-                onDefeated(Utils.getString(R.string.net_parse_error), 1004);
-                LogUtils.d(Utils.getString(R.string.net_parse_error));
+                onDefeated(Tools.getString(R.string.net_parse_error), 1004);
+                LogUtils.d(Tools.getString(R.string.net_parse_error));
                 break;
             case UNKNOWN_ERROR:
             default:
-                onDefeated(Utils.getString(R.string.net_unKnown_error), 1000);
-                LogUtils.d(Utils.getString(R.string.net_unKnown_error));
+                onDefeated(Tools.getString(R.string.net_unKnown_error), 1000);
+                LogUtils.d(Tools.getString(R.string.net_unKnown_error));
                 break;
         }
     }
