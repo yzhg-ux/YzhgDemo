@@ -33,10 +33,17 @@ public abstract class BasicFragment extends Fragment {
     protected Activity context;
     private CustomDialog customDialog;
 
+    @Nullable
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        this.context = (Activity) context;
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        mRootView = inflater.inflate(getLayoutId(), container, false);
+        return mRootView;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        init();
     }
 
     protected void showBaseLoadingDialog(String msg) {
@@ -61,4 +68,11 @@ public abstract class BasicFragment extends Fragment {
             customDialog.dismiss();
         }
     }
+
+    private void init() {
+        context = getActivity();
+    }
+
+    protected abstract int getLayoutId();
+
 }

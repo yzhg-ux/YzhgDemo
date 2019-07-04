@@ -52,6 +52,8 @@ public abstract class BasicActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setMaxAspect();
+        View contentView = getLayoutInflater().inflate(getLayoutId(), null);
+        setContentView(contentView);
         if (setStatusBarLucency()) {
             setStatusBarFullTransparent();
             setFitSystemWindow(false);
@@ -66,7 +68,7 @@ public abstract class BasicActivity extends AppCompatActivity {
     protected void onResume() {
         if (Build.VERSION.SDK_INT == Build.VERSION_CODES.O && isTranslucentOrFloating()) {
             boolean result = fixOrientation();
-    }
+        }
         super.onResume();
     }
 
@@ -139,6 +141,9 @@ public abstract class BasicActivity extends AppCompatActivity {
             //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
     }
+
+
+    protected abstract int getLayoutId();
 
     protected void showBaseLoadingDialog(String msg) {
         showDialog(msg);
