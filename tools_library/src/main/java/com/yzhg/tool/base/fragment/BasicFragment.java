@@ -37,14 +37,13 @@ public abstract class BasicFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         mRootView = inflater.inflate(getLayoutId(), container, false);
-
         return mRootView;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        init(mRootView);
+        initView(mRootView);
     }
 
     protected void showBaseLoadingDialog(String msg) {
@@ -70,7 +69,7 @@ public abstract class BasicFragment extends Fragment {
         }
     }
 
-    protected void init(View view) {
+    protected void initView(View view) {
         context = getActivity();
     }
 
