@@ -70,7 +70,7 @@ public abstract class BasicFragment extends Fragment {
         }
     }
 
-    private void init(View view) {
+    protected void init(View view) {
         context = getActivity();
     }
 
