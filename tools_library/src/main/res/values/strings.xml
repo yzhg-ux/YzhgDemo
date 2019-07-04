@@ -7,4 +7,5 @@
     <string name="net_parse_error" translatable="false">参数不合法</string>
     <string name="net_unKnown_error" translatable="false">系统繁忙,请稍后重</string>
     <string name="loading">加载中...</string>
+    <string name="click_to_refresh">加载失败！请重试</string>
 </resources>
