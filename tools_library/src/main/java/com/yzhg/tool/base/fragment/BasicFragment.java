@@ -29,25 +29,24 @@ import java.util.Map;
  */
 public abstract class BasicFragment extends Fragment {
 
-    protected View mRootView;
     protected Activity context;
     private CustomDialog customDialog;
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        mRootView = inflater.inflate(getLayoutId(), container, false);
-        return mRootView;
-    }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        initView(mRootView);
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.context = (Activity) context;
     }
 
-    protected void showBaseLoadingDialog(String msg) {
+    protected void showLoading(String msg) {
         showDialog(msg);
+    }
+
+    protected void dismissDialog() {
+        if (customDialog != null && customDialog.isShowing()) {
+            customDialog.dismiss();
+        }
     }
 
     private void showDialog(String msg) {
@@ -62,17 +61,4 @@ public abstract class BasicFragment extends Fragment {
                 .build();
         customDialog.show();
     }
-
-    protected void closeBaseLoadingDialog() {
-        if (customDialog != null && customDialog.isShowing()) {
-            customDialog.dismiss();
-        }
-    }
-
-    protected void initView(View view) {
-        context = getActivity();
-    }
-
-    protected abstract int getLayoutId();
-
 }

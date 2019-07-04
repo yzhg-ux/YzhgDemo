@@ -51,13 +51,9 @@ public abstract class BasicActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        View contentView = getLayoutInflater().inflate(getLayoutId(), null);
-        setContentView(contentView);
         activitysManager = ActivitysManager.getInstance();
         activitysManager.addActivity(this);
     }
-
-    protected abstract int getLayoutId();
 
     protected void showBaseLoadingDialog(String msg) {
         showDialog(msg);
